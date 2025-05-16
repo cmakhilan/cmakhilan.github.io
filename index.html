@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beating ASCII Heart</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #111;
+            font-family: monospace;
+            color: #ff3366;
+        }
+        
+        .heart-container {
+            text-align: center;
+        }
+        
+        .heart {
+            white-space: pre;
+            text-align: center;
+            animation: beat 3s infinite alternate;
+            text-shadow: 0 0 10px currentColor;
+        }
+        
+        @keyframes beat {
+            0% {
+                transform: scale(0.8);
+                color: #ff3366;
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.1);
+                color: #ff0066;
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.9);
+                color: #ff6699;
+                opacity: 0.9;
+            }
+        }
+        
+        .message {
+            margin-top: 20px;
+            color: #666;
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-container">
+        <div class="heart" id="beatingHeart">
+  @@@@@@@   @@@@@@@  
+ @@@@@@@@@ @@@@@@@@@ 
+@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@
+ @@@@@@@@@@@@@@@@@@@ 
+  @@@@@@@@@@@@@@@@@  
+   @@@@@@@@@@@@@@@   
+    @@@@@@@@@@@@@    
+     @@@@@@@@@@@     
+      @@@@@@@@@      
+       @@@@@@@       
+        @@@@@        
+         @@@         
+          @          
+        </div>
+        <div class="message">❤️ I miss u ❤️</div>
+    </div>
+
+</body>
+</html>
